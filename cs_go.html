@@ -1911,6 +1911,7 @@
                                         // Show the current tab, and add an "active" class to the button that opened the tab
                                         document.getElementById(cityName).style.display = "block";
                                         evt.currentTarget.className += " active";
+
                                     }
                                     
                                     window.onload = function() {
@@ -1959,7 +1960,7 @@
                                                                         "Silver Elite", "Silver Elite Master", "Silver Elite Master",
                                                                         "Gold Nova 1", "Gold Nova 2", "Gold Nova 3", "Gold Nova Master",
                                                                         "Master Guardian", "Master Guardian 2", "Master Guardian Elite",
-                                                                        "Distinguished Master Elite", "Legendary Eagle", "Legendary Eagle Master",
+                                                                        "Distinguished Master Guardian", "Legendary Eagle", "Legendary Eagle Master",
                                                                         "Supreme Master First Class", "The Global Elite"
                                                                         ];
 
@@ -2057,8 +2058,8 @@
                                                             <option _ngcontent-my-app-c52="" value="Master Guardian Elite">
                                                                 Master Guardian Elite
                                                             </option>
-                                                            <option _ngcontent-my-app-c52="" value="Distinguished Master Elite">
-                                                                Distinguished Master Elite
+                                                            <option _ngcontent-my-app-c52="" value="Distinguished Master Guardian">
+                                                                Distinguished Master Guardian
                                                             </option>
                                                             <option _ngcontent-my-app-c52="" value="Legendary Eagle">
                                                                 Legendary Eagle
@@ -2120,8 +2121,8 @@
                                                             <option _ngcontent-my-app-c52="" value="Master Guardian Elite">
                                                                 Master Guardian Elite
                                                             </option>
-                                                            <option _ngcontent-my-app-c52="" value="Distinguished Master Elite">
-                                                                Distinguished Master Elite
+                                                            <option _ngcontent-my-app-c52="" value="Distinguished Master Guardian">
+                                                                Distinguished Master Guardian
                                                             </option>
                                                             <option _ngcontent-my-app-c52="" value="Legendary Eagle">
                                                                 Legendary Eagle
@@ -2167,6 +2168,212 @@
                                     </div>
                                 </div>
                                 </div>
+
+                                <!---->
+
+                                <div id="Wins" class="tabcontent" style="display: flex;">
+                                    <div _ngcontent-my-app-c52="" class="contact-section">
+                                        <div _ngcontent-my-app-c52="" class="social-box-section ng-lazyloaded"> 
+                                            <div _ngcontent-my-app-c52="" class="text">
+                                                The cost of our services according to the entered parameters:
+                                            </div>
+                                            <div _ngcontent-my-app-c52="" class="open">    
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="66px" viewBox="0 0 24 24" width="66px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                                            <i id="cost2" style="color: var(--color-icon);">0.00</i>
+                                            </div>
+                                        </div>
+                                        <div _ngcontent-my-app-c52="" class="contact-wrapper" style="background-color: transparent;">
+                                            <div _ngcontent-my-app-c52="" class="title">
+                                                Interested in the price?
+                                            </div>
+                                            <div _ngcontent-my-app-c52="" class="subtitle">
+                                                Please enter the desired parameters of boosting to see it.
+                                            </div>
+                                            <form _ngcontent-my-app-c52="" novalidate="" class="ng-untouched ng-pristine ng-invalid">
+                                                <div _ngcontent-my-app-c52="" class="content">
+                                                    <div _ngcontent-my-app-c52="" class="left-side">
+                                                        <div _ngcontent-my-app-c52="" class="input-box">
+                                                            <label _ngcontent-my-app-c52="" for="category">
+                                                                Select Your rank
+                                                            </label>
+    
+                                                            <script>
+                                                                let summs2 = [
+                                                                    "2.1", "2.1", "2.1", "2.1", "2.1", "2.1",
+                                                                    "2.6", "2.6", "3", "3.3", "3.3",
+                                                                    "3.8", "4.3", "4.4", "5.2", "6.2", "11", "15", "26"
+                                                                ];
+
+
+                                                                function foreacher2(rank, j) {
+                                                                    var i = find(rank);
+                                                                    var sum = 0;
+
+                                                                    for (; j>0; j-=1) {
+                                                                        sum += Number(summs2[i]);
+                                                                    }
+    
+                                                                    return sum;
+                                                                }
+    
+    
+                                                                function setCost2() {
+                                                                    var selectBox  = document.getElementById("realRank2");
+                                                                    var val1       = selectBox.options[selectBox.selectedIndex].value;
+                                                                    selectBox      = document.getElementById("myRange");
+                                                                    var val2       = Number(selectBox.value);
+                                                                    var cost       = document.getElementById("cost2");
+                                                                    var sum        = foreacher2(val1, val2);
+    
+                                                                    cost.innerHTML = sum.toFixed(2);
+
+
+                                                                    // -------------------------------------
+
+                                                                    document.getElementById("slided").innerHTML = val2;
+                                                                }
+                                                            </script>
+    
+                                                            <select onchange="setCost2();" _ngcontent-my-app-c52="" formcontrolname="category" id="realRank2"
+                                                            name="category2" placeholder="Select category" class="customInput ng-untouched ng-pristine ng-valid">
+                                                                <option _ngcontent-my-app-c52="" value="Silver 1">
+                                                                    Silver 1
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Silver 2">
+                                                                    Silver 2
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Silver 3">
+                                                                    Silver 3
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Silver 4">
+                                                                    Silver 4
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Silver Elite">
+                                                                    Silver Elite
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Silver Elite Master">
+                                                                    Silver Elite Master
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Gold Nova 1">
+                                                                    Gold Nova 1
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Gold Nova 2">
+                                                                    Gold Nova 2
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Gold Nova 3">
+                                                                    Gold Nova 3
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Gold Nova Master">
+                                                                    Gold Nova Master
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Master Guardian">
+                                                                    Master Guardian
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Master Guardian 2">
+                                                                    Master Guardian 2
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Master Guardian Elite">
+                                                                    Master Guardian Elite
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Distinguished Master Guardian">
+                                                                    Distinguished Master Guardian
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Legendary Eagle">
+                                                                    Legendary Eagle
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Legendary Eagle Master">
+                                                                    Legendary Eagle Master
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="Supreme Master First Class">
+                                                                    Supreme Master First Class
+                                                                </option>
+                                                                <option _ngcontent-my-app-c52="" value="The Global Elite">
+                                                                    The Global Elite
+                                                                </option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div _ngcontent-my-app-c52="" class="input-box">
+                                                            <label _ngcontent-my-app-c52="" for="category">
+                                                                Number of wins
+                                                            </label>
+
+                                                            <style>
+                                                                input[type='range'] {
+                                                                    width: 62%;
+                                                                    -webkit-appearance: none;
+                                                                    background-color: transparent;
+                                                                }
+
+                                                                input[type='range']::-webkit-slider-runnable-track {
+                                                                    height: 56px;
+                                                                    -webkit-appearance: none;
+                                                                    color: #440d28;
+                                                                    margin-top: -1px;
+                                                                }
+
+                                                                input[type='range']::-webkit-slider-thumb {
+                                                                    width: 10px;
+                                                                    -webkit-appearance: none;
+                                                                    height: 10px;
+                                                                    cursor: ew-resize;
+                                                                    background: #434343;
+                                                                    box-shadow: -80px 0 0 80px #440d28;
+                                                                }
+
+                                                                input[type="range"]::-moz-range-progress {
+                                                                    background-color: #440d28; 
+                                                                }
+                                                                input[type="range"]::-moz-range-track {  
+                                                                    background-color: var(--primary-background);
+                                                                }
+                                                                input[type="range"]::-ms-fill-lower {
+                                                                    background-color: #440d28; 
+                                                                }
+                                                                input[type="range"]::-ms-fill-upper {  
+                                                                    background-color: var(--primary-background);
+                                                                }
+
+                                                                .slider {
+                                                                    cursor: pointer;
+                                                                }
+                                                            </style>
+
+                                                            <div class="slidecontainer">
+                                                                <input onchange="setCost2();" oninput="setCost2();" type="range" min="1" max="10" value="1" class="slider" id="myRange">
+                                                            </div>
+                                                            <i id="slided" style="color: var(--color-icon);">0</i>
+                                                        </div>
+                                                        <div _ngcontent-my-app-c52="" class="row">
+                                                            <div _ngcontent-my-app-c52="" class="input-box">
+                                                                <label _ngcontent-my-app-c52="" for="email">
+                                                                    E-mail address
+                                                                </label>
+                                                                <input _ngcontent-my-app-c52="" type="email" formcontrolname="email" id="email2"
+                                                                placeholder="Your email address" class="customInput ng-untouched ng-pristine ng-invalid">
+                                                            </div>
+                                                            <div _ngcontent-my-app-c52="" class="input-box">
+                                                                <label _ngcontent-my-app-c52="" for="name">
+                                                                    Name
+                                                                </label>
+                                                                <input _ngcontent-my-app-c52="" type="text" formcontrolname="name" id="name2"
+                                                                placeholder="Your name" class="customInput ng-untouched ng-pristine ng-invalid">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div _ngcontent-my-app-c52="" class="send-message">
+                                                    <button _ngcontent-my-app-c52="" type="submit" class="btn">
+                                                        <fa-icon _ngcontent-my-app-c52="" icon="paper-plane" class="ng-fa-icon">
+                                                            <svg style="fill: var(--link-color);" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="18px" viewBox="0 0 24 24" width="22px" fill="#FFFFFF"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M16.81,8.94l-3.75-3.75L4,14.25V18h3.75L16.81,8.94z M6,16v-0.92l7.06-7.06l0.92,0.92L6.92,16H6z"/><path d="M19.71,6.04c0.39-0.39,0.39-1.02,0-1.41l-2.34-2.34C17.17,2.09,16.92,2,16.66,2c-0.25,0-0.51,0.1-0.7,0.29l-1.83,1.83 l3.75,3.75L19.71,6.04z"/><rect height="4" width="20" x="2" y="20"/></g></g></svg>
+                                                        </fa-icon>
+                                                        Send order
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
                             </section>
                         </app-our-features>
                         <app-advantages class="ng-tns-c54-2" _nghost-my-app-c47="">
