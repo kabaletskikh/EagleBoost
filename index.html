@@ -1736,6 +1736,12 @@
                                                                 </li>
                                                                 <hr>
                                                                 <li>
+                                                                    <a href="#">
+                                                                        Valorant
+                                                                    </a>
+                                                                </li>
+                                                                <hr>
+                                                                <li>
                                                                     <a href="cs_go.html">
                                                                         CS:GO
                                                                     </a>
@@ -1743,7 +1749,7 @@
                                                                 <hr>
                                                                 <li>
                                                                     <a href="#">
-                                                                        PUBG
+                                                                        Overwatch
                                                                     </a>
                                                                 </li>
                                                                 <hr>
@@ -1752,6 +1758,14 @@
                                                                         APEX
                                                                     </a>
                                                                 </li>
+                                                                <hr>
+                                                                <li>
+                                                                    <a href="cs_go.html">
+                                                                        Rainbow 6
+                                                                    </a>
+                                                                </li>
+                                                                <hr>
+                                                                <hr>
                                                             </ul>
                                                 </div>
                                             </div>
@@ -1759,10 +1773,20 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <script>
+                                function toContact() { // Проверяем загрузку
+                                    $('html, body').animate({
+                                            scrollTop: $('#contact').offset().top // прокручиваем страницу к требуемому элементу
+                                        }, 866 // скорость прокрутки
+                                    );
+                                }
+                            </script>
+
                             <div class="right ng-tns-c40-0">
                                 <div class="menu ng-tns-c40-0 ng-trigger ng-trigger-slideInOut"
                                 style="opacity: 1; visibility: visible; pointer-events: initial; cursor: initial;">
-                                    <div title="Contact us" class="menu-item ng-tns-c40-0">
+                                    <div onclick="toContact();" title="Contact us" class="menu-item ng-tns-c40-0">
                                         Contact Us 24/7
                                         <!---->
                                     </div>
